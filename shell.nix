@@ -1,6 +1,6 @@
 let
   pkgs = import <nixpkgs> {};
-  python = pkgs.python312;
+  python = pkgs.python313;
   pythonPackages = python.pkgs;
   lib-path = with pkgs; lib.makeLibraryPath [
     stdenv.cc.cc
@@ -20,6 +20,7 @@ in with pkgs; mkShell {
     pythonPackages.requests
     pythonPackages.jupyter-core
     pythonPackages.notebook
+    pythonPackages.opencv4
   ];
 
   buildInputs = [
@@ -32,7 +33,7 @@ in with pkgs; mkShell {
     VENV=.venv
 
     if test ! -d $VENV; then
-      python3.12 -m venv $VENV
+      python3.13 -m venv $VENV
     fi
     source ./$VENV/bin/activate
     export PYTHONPATH=`pwd`/$VENV/${python.sitePackages}/:$PYTHONPATH
