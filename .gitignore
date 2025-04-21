@@ -176,3 +176,14 @@ cython_debug/
 leafsnap-dataset/
 
 leafsnap-dataset.zip
+leafcnn_model.pt
+leafdcnn_model.pt
+leafdcnnbn_model.pt
+
+label_encoder.pkl
+
+pca_flat.pkl
+pca_hl.pkl
+
+svm_flat.pkl
+svm_hl.pkl
