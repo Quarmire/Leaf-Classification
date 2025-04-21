@@ -18,6 +18,8 @@ in with pkgs; mkShell {
     pythonPackages.torch
     pythonPackages.torchvision
     pythonPackages.requests
+    pythonPackages.jupyter-core
+    pythonPackages.notebook
   ];
 
   buildInputs = [
